@@ -1,0 +1,13 @@
+<%= form_for attraction do |f| %>
+  <h3><%= f.label "Attraction name"  %></h3>
+  <h3><%= f.text_field :name %></h3>
+  <h3><%= f.label "Ticket_price"  %></h3>
+  <h3><%= f.text_field :tickets %></h3>
+  <h3><%= f.label "Nausea_index" %></h3>
+  <h3><%= f.text_field :nausea_rating %></h3>
+  <h3><%= f.label "Happiness_index" %></h3>
+  <h3><%= f.text_field :happiness_rating %></h3>
+  <h3><%= f.label "Height_requirement" %></h3>
+  <h3><%= f.text_field :min_height %></h3>
+  <%= f.submit %>
+<% end %>

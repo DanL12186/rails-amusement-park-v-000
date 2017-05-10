@@ -1,0 +1,6 @@
+<h1>Welcome, <%= @user.name %>!</h1>
+<%= "Welcome to Parks & Rec! You and Ann ride for free!" if current_user.name == "Amy Poehler"; "ADMIN" if current_user.admin %>
+
+<h4> Mood: <%= @user.mood %> </h4>
+<h4> Tickets: <%= @user.tickets %> </h4>
+<h4> Height: <%= @user.height %> inches </h4>

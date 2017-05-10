@@ -1,0 +1,14 @@
+<h1><%= @attraction.name %></h1>
+<%= link_to "Edit Attraction", edit_attraction_path(@attraction) if current_user.admin %>
+<br>
+<!-- <%= form_tag("/users/#{current_user.id}", method: :put) %> -->
+
+<h3> Ticket Price: <%= @attraction.tickets %> </h3>
+<h3> Nausea index: <%= @attraction.nausea_rating %> </h3>
+<h3> Happiness index: <%= @attraction.happiness_rating %> </h3>
+<h3> Height Requirement: <%= @attraction.min_height %> </h3>
+
+<%= form_for @attraction, url: user_path(current_user.id) do |f| %>
+ <%= f.hidden_field :attraction_id, value: @attraction.id %>
+ <%= f.submit "Go on this ride" %>
+ <% end %>

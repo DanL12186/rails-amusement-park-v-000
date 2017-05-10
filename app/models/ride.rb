@@ -1,3 +1,10 @@
 class Ride < ActiveRecord::Base
-  # write associations here
+  include RideHelper
+
+  belongs_to :user
+  belongs_to :attraction
+
+  def take_ride
+    meets_requirements?
+  end
 end
